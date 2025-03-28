@@ -27,16 +27,19 @@ header{
     padding: 30px 18%;
     transition: ease .40s;
 }
-.logo{
-    font-size: 35px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    color: #fff;
+
+.logo img {
+    width: 200px;
+    height: auto; 
+}
+
+.logo {
+    position: absolute;  
+    left: 5%; 
 }
 
 .navbar{
     display: flex;
-
 }
 
 .navbar a{
@@ -46,13 +49,13 @@ header{
     padding: 10px 22px;
     border-radius: 4px;
     transition: ease .40s;
-
+    background: #133C55;
+    margin: 0 10px;
 }
 
-
 .navbar a:hover{
-    background-color: #fff;
-    color: #221314;
+    background-color:#0a2434;
+    color: #fff;
     box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
     border-radius: 4px;
    
@@ -77,13 +80,13 @@ section{
 .home-text h1{
     font-size:50px;
     line-height: 1.2;
-    color:#04041ae2;
+    color: #133C55;
     letter-spacing: 2px;
     margin-bottom: 20px;
 }
 
 .home-text p{
-    color: #ffffffbf;
+    color: #ffffffee;
     font-size: 25px;
     font-weight: 400;
     line-height: 38px;
@@ -92,14 +95,14 @@ section{
 
 .home-btn{
     display: inline-block;
-    font-size: 16px;
-    padding: 15px 30px;
-    background: #ffffffbf;
-    color: #221314;
-    border-radius: 15px;
-    transition: ease .40s;
+    font-size: 18px;
+    padding: 10px 22px;
+    background: #ffffff;
+    color: #176087;
+    border-radius: 6px;
+    box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
 }
 
 .home-btn:hover{
-    background: #034a74 ;
+    background-color: #c2bfbfe5;
 }
