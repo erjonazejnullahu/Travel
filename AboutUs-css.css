@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: 'Poppins';
 }
+
 body{
     background-color: #f2f2f2;
 }
@@ -25,17 +26,14 @@ header {
     height: 70px;
 }
 
-
 .logo img {
     width: 200px;
     height: auto; 
 }
 
-
 #menu-toggle {
     display: none;
 }
-
 
 .menu-icon {
     display: none;
@@ -86,7 +84,7 @@ header {
         position: absolute;
         top: 70px;
         right: 0;
-        background: #133C55;
+        background: #176087;
         width: 100%;
         text-align: center;
         padding: 10px 0;
@@ -176,7 +174,7 @@ header {
 }
 
 .about-content h2{
-    font-size: 23px;
+    font-size: 30px;
     margin-bottom: 15px;
     color: #333;
 }
@@ -212,26 +210,25 @@ header {
     }
   
   
-  .banner__card {
-    padding: 100px;
+.banner__card {
+    padding: 80px;
     min-height: 70px;
     text-align: center;
     background-color: #176087;
     border-radius: 2rem;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
-  }
+}
   
-  .banner__card h4 {
+.banner__card h4 {
     font-size: 5rem;
     font-weight: 500;
     color: #fff;
+}
 
-  }
-  
-  .banner__card p {
+.banner__card p {
     color: #fff;
-  }
-  
+}
+
 @media screen and (max-width: 768px){
     .heading{
         padding: 0px 20px;
@@ -273,6 +270,84 @@ header {
     max-width: 1170px;
     margin: auto;
 }
+
+.reviews-heading {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.reviews-heading h1 {
+    font-size: 40px;
+    color: #302f2f;
+    margin-top: 50px;
+    position: relative;
+}
+
+.reviews {
+    display: flex;
+    gap: 12px;
+    max-width: 700px;
+    width: 100%;
+    background: #176087;
+    border-radius: 14px;
+    padding: 30px;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    scroll-padding: 30px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; 
+    margin-top: 60px;
+    justify-content: flex-start; 
+}
+
+.reviews .card {
+    display: flex;
+    flex: 0 0 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border-radius: 12px;
+    background: #f2f2f2;
+    scroll-snap-align: start;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card .image {
+    height: 150px;
+    width: 150px;
+    padding: 4px;
+    background: #176087;
+    border-radius: 50%;
+}
+
+.image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #fff;
+}
+
+.card h2 {
+    margin-top: 25px;
+    color: #333;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.card p {
+    margin-top: 4px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #666;
+    text-align: center;
+}
+
 
 .footer1{
     background: #133C55;
