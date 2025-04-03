@@ -1,0 +1,273 @@
+body {
+    font-family: 'Poppins';
+    margin: 0;
+    padding: 0;
+    background-color: #59A5D8;
+}
+
+header {
+    background-color: #59A5D8;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header .Account img {
+    width: 20%;
+    max-width: 150px;
+    display: block;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-top: 10px;
+    font-size: 2em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: ease .40s;
+    background: #133C55;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #39a1ff;
+}
+
+main {
+    padding: 20px;
+}
+
+#profile {
+    background-color: white;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#profile h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+#profile p {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+#profile button {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: ease .40s;
+    background: #133C55;
+    text-decoration: none;
+    outline: none; 
+}
+
+#profile button:hover {
+    background-color: #1D84B5;
+}
+
+
+#change-profile-pic {
+    background-color: white;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#change-profile-pic h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+#change-profile-pic input[type="file"] {
+    margin: 10px 0;
+}
+
+#change-profile-pic button {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: ease .40s;
+    background: #133C55;
+    text-decoration: none;
+}
+
+#change-profile-pic button:hover {
+    background-color: #39a1ff;
+}
+
+#settings {
+background-color: white;
+padding: 20px;
+border-radius: 30px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#settings h2 {
+font-size: 1.8em;
+margin-bottom: 10px;
+}
+
+#settings form {
+display: flex;
+flex-direction: column;
+}
+
+#settings label {
+font-size: 1.2em;
+margin-bottom: 8px;
+}
+
+#settings input[type="password"] {
+padding: 10px;
+margin-bottom: 15px;
+border: 1px solid #ccc;
+border-radius: 10px;
+border-color: #39a1ff;
+font-size: 1.1em;
+}
+
+
+#settings button {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: ease .40s;
+    background: #133C55;
+    text-decoration: none;
+}
+
+#settings button:hover {
+background-color: #39a1ff;
+}
+
+#profile button,
+#change-profile-pic button,
+#settings button {
+    font-family: 'Poppins';
+}
+
+.container_footer{
+    max-width: 1170px;
+    margin: auto;
+}
+
+.footer1{
+    background: #133C55;
+    padding: 70px 0;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-col{
+    width: 22%;
+    padding: 0 15px;
+}
+
+.footer-col h4{
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background: blue;
+    height: 2px;
+    box-sizing: border-box;
+    width: 70px;
+}
+.footer-col h4,
+.footer-col ul li a {
+    color: #fff;
+}
+
+.footer-col ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-col ul li a{
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    margin-bottom: 10px;
+    transition: all, 3s ease;
+}
+.footer-col ul li a:hover{
+    color: #bbbbbb;
+    padding-left: 6px;
+}
+
+.footer-col .social-link a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background: rgba(255,255,255,.2);
+    margin: 0 10px 10 0px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50px;
+    color: #fff;
+    transition: all .5s ease;
+}
+.footer-col .social-link a img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.footer-col .social-link a:hover{
+    color: #24262b;
+    background: #fff;
+}
+
+@media(max-width:767px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+@media(max-width:767px){
+    .footer-col{
+        width: 100%;
+    }
+}
