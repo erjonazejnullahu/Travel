@@ -35,7 +35,7 @@ if (!isset($_SESSION['email'])) {
             <li><a href="Profile.html">Profile</a></li>
         </ul>
 </header>
-<br><br>
+<br><br><br>
     <h1>User Dashboard</h1>
 
     <table>
@@ -73,6 +73,48 @@ if (!isset($_SESSION['email'])) {
         }
         ?>
     </table>
+
+     <!-- Footer -->
+
+     <div class="footer1">
+        <div class="container_footer">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li> <a href="#">About us</a></li>
+                        <li> <a href="#">Our services</a></li>
+                        <li> <a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get help</h4>
+                    <ul>
+                        <li> <a href="#">FAQ</a></li>
+                        <li> <a href="#">Troubleshooting</a></li>
+                        <li> <a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <ul>
+                    <h4>Explore</h4>
+                    <li> <a href="#">Destinations</a></li>
+                    <li> <a href="#">Travel Guides</a></li>
+                    <li> <a href="#">Tours</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow us</h4>
+                    <div class="social-link">
+                        <a href="#"> <img src="Images/facebook.logo.webp"></a>
+                        <a href="#"> <img src="Images/instagram-logo.webp"></a>
+                        <a href="#"> <img src="Images/twitter-logo.png"></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
