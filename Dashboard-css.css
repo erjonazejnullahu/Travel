@@ -1,0 +1,153 @@
+body {
+    font-family: 'Poppins';
+    background-color: #eef2f3;
+    padding: 20px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 5px 5%;
+    transition: ease .40s;
+    height: 70px;
+}
+
+.logo img {
+    width: 200px;
+    height: auto; 
+}
+
+.logo{
+    padding-left: 150px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    color: #133C55;
+    cursor: pointer;
+}
+
+/* Navbar */
+.navbar {
+    list-style: none;
+    display: flex;
+}
+
+.navbar li {
+    margin: 0 10px;
+}
+
+
+.navbar a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: ease .40s;
+    background: #133C55;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #0a2434;
+    color: #fff;
+    box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        position: absolute;
+        left: 350px; 
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #133C55;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s ease;
+    }
+
+    
+    #menu-toggle:checked + .menu-icon + .navbar {
+        height: auto;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 15px;
+        width: 100%;
+    }
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #176087;
+    color: white;
+}
+
+a.edit-button, a.delete-button {
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    border-radius: 4px;
+}
+
+a.edit-button {
+    background-color: #28a745;
+}
+
+a.delete-button {
+    background-color: #dc3545;
+}
+
+.footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
