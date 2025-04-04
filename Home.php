@@ -1,4 +1,11 @@
-=<!DOCTYPE html>
+<?php
+session_start();
+
+$isLoggedIn = isset($_SESSION['user_id']);
+$showDashboardButton = ($isLoggedIn && isset($_SESSION['role']) && $_SESSION['role'] === 'admin');  // Show Dashboard only for admin
+?>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,6 +29,9 @@
             <li><a href="AboutUs.html">About Us</a></li>
             <li><a href="ContactUs.html">Contact Us</a></li>
             <li><a href="#">Profile</a></li>
+            <?php if ($showDashboardButton): ?>
+            <li><a href="Dashboard.php" class="dashboard-btn">Dashboard</a></li>
+        <?php endif; ?>
         </ul>
     </header>
 
