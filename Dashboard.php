@@ -31,8 +31,8 @@ if (!isset($_SESSION['email'])) {
         
         <ul class="navbar">
             <li><a href="Home.php">Home</a></li>
-            <li><a href="ContactUs.html">Contact Us</a></li>
-            <li><a href="Profile.html">Profile</a></li>
+            <li><a href="ContactUs.php">Contact Us</a></li>
+            <li><a href="Profile.php">Profile</a></li>
         </ul>
 </header>
 <br><br><br>
