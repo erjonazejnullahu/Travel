@@ -46,9 +46,9 @@ if (isset($_POST['editBtn'])) {
         <label for="menu-toggle" class="menu-icon">&#9776;</label>
         
         <ul class="navbar">
-            <li><a href="Home.html">Home</a></li>
-            <li><a href="ContactUs.html">Contact Us</a></li>
-            <li><a href="#">Profile</a></li>
+            <li><a href="Home.php">Home</a></li>
+            <li><a href="ContactUs.php">Contact Us</a></li>
+            <li><a href="Profile.php">Profile</a></li>
         </ul>
     </header>
     <br> <br> <br>
