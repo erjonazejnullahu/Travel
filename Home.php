@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'Database.php'; // Include the database connection class
+require_once 'Database.php';
 
 $isLoggedIn = isset($_SESSION['user_id']);
 $showDashboardButton = ($isLoggedIn && isset($_SESSION['role']) && $_SESSION['role'] === 'admin');  // Show Dashboard only for admin
@@ -11,7 +11,7 @@ if (!isset($_SESSION['user_id'])) {
     exit;
 }
 
-// Create a new Database instance
+
 $database = new Database();
 $conn = $database->getConnection();
 
