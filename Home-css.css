@@ -8,6 +8,7 @@ body {
     background: #f2f2f2;
     font-family: 'Poppins';
 }
+
 header {
     position: fixed;
     top: 0;
@@ -75,7 +76,6 @@ header {
     border: none;
     cursor: pointer;
 }
-
 .navbar a:hover {
     background-color: #0a2434;
     color: #fff;
@@ -126,7 +126,7 @@ header {
 }
 
 .article-container {
-    margin-top: 90px; 
+    margin-top: 90px; /* Added margin to push content below the fixed header */
 }
 .article-container h1{
     text-align: center;
@@ -254,6 +254,23 @@ header {
     font-size: 18px;
     margin-top: 20px;
     color: #176087;
+}
+
+.add-destination-btn {
+    display: inline-block;
+    background-color: #38A3A5;
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.add-destination-btn:hover {
+    background-color: #176087;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
 
 @media screen and (max-width: 780px) {
