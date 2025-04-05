@@ -1,3 +1,20 @@
+<?php
+session_start();
+include_once 'Database.php';
+include_once 'UserRepository.php';
+include_once 'User.php';
+
+$db = new Database();
+$conn = $db->getConnection();
+
+$email = $_SESSION['email'];
+$query = "SELECT name, lastname, email FROM users WHERE email = :email";
+$stmt = $conn->prepare($query);
+$stmt->bindParam(':email', $email);
+$stmt->execute();
+$user = $stmt->fetch(PDO::FETCH_ASSOC);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +22,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <link rel="stylesheet" href="Profile-css.css">
+    <link rel="stylesheet" href="Profile-css.css?v=2">
 </head>
 <body>
     <header>
@@ -15,18 +32,23 @@
         <h1>Profile</h1>
         <nav>
             <ul>
-                <li><a href="Home.html">Home</a></li>
-                <li><a href="#logout">Logout</a></li>
+                <li><a href="Home.php">Home</a></li>
+                <li><?php
+            if (isset($_SESSION['email'])) {
+                echo '<button id="logoutBtn" type="button">Log Out</button>';
+            } else {
+                echo '<a href="Login.php"><button type="button">Log In</button></a>';
+            }
+            ?></li>
             </ul>
         </nav>
     </header>
     <main>
         <section id="profile">
             <h2>Profile Information</h2>
-            <p>Name:</p>
-            <p>Email:</p>
-            <p>Student ID:</p>
-            <button>Edit Profile</button>
+            <p><span class="bold-text">Name: </span><?php echo $user['name']; ?></p>
+            <p><span class="bold-text">Last Name: </span><?php echo $user['lastname']; ?></p>
+            <p><span class="bold-text">Email: </span><?php echo $user['email']; ?></p>
         </section>
         <section id="change-profile-pic">
             <h2>Change Profile Picture</h2>
@@ -83,6 +105,33 @@
             </div>
         </div>
     </div>
-    
+    <div id="logoutModal" class="modal" style="display:none;">
+    <div class="modal-content">
+        <h2>Are you sure you want to log out?</h2>
+        <button id="confirmLogout">Log Out</button>
+        <button id="cancelLogout">Cancel</button>
+    </div>
+</div>
+
+<script>
+    const logoutBtn = document.getElementById('logoutBtn');
+    const logoutModal = document.getElementById('logoutModal');
+    const confirmLogout = document.getElementById('confirmLogout');
+    const cancelLogout = document.getElementById('cancelLogout');
+
+    logoutModal.style.display = "none";
+
+    logoutBtn.addEventListener('click', function() {
+        logoutModal.style.display = "flex";
+    });
+
+    confirmLogout.addEventListener('click', function() {
+        window.location.href = "Logout.php";
+    });
+
+    cancelLogout.addEventListener('click', function() {
+        logoutModal.style.display = "none";
+    });
+</script>
 </body>
 </html>
