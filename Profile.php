@@ -4,6 +4,12 @@ include_once 'Database.php';
 include_once 'UserRepository.php';
 include_once 'User.php';
 
+if (!isset($_SESSION['email'])) {
+    header("Location: Login.php");
+    exit();
+}
+
+
 $db = new Database();
 $conn = $db->getConnection();
 
