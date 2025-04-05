@@ -13,6 +13,12 @@ $stmt = $conn->prepare($query);
 $stmt->bindParam(':email', $email);
 $stmt->execute();
 $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['password'])) {
+    $newPassword = $_POST['password'];
+    $userRepo = new UserRepository();
+    $userRepo->updateUserPassword($email, $newPassword);
+}
 ?>
 
 <!DOCTYPE html>
@@ -50,15 +56,9 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
             <p><span class="bold-text">Last Name: </span><?php echo $user['lastname']; ?></p>
             <p><span class="bold-text">Email: </span><?php echo $user['email']; ?></p>
         </section>
-        <section id="change-profile-pic">
-            <h2>Change Profile Picture</h2>
-            <input type="file" accept="image/*"><br>
-            <br>
-            <button>Upload Picture</button>
-        </section>
         <section id="settings">
             <h2>Account Settings</h2>
-            <form>
+            <form method="post">
                 <label for="password">Change Password:</label>
                 <input type="password" id="password" name="password" required>
                 <button type="submit">Update Password</button>
