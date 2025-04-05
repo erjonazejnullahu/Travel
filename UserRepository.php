@@ -87,5 +87,15 @@ class UserRepository {
 
         echo "<script>alert('Delete was successful');</script>";
     }
+
+    //Contact Us
+    function messageFromContactUs($name, $email, $message){
+        $conn = $this->connection;
+
+        $sql = "INSERT INTO messages(name,email,message) VALUES(?, ?, ?)";
+
+        $statement = $conn->prepare($sql);
+        $statement->execute([$name, $email, $message]);
+    }
 }
 ?>
