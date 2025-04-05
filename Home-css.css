@@ -1,15 +1,13 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background: #f2f2f2;
-    font-size: 16px;
     font-family: 'Poppins';
 }
-
 header {
     position: fixed;
     top: 0;
@@ -19,7 +17,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #1D84B5;
+    background: #f2f2f2;
     padding: 5px 5%;
     transition: ease .40s;
     height: 70px;
@@ -56,13 +54,26 @@ header {
 
 .navbar a {
     color: #fff;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 500;
     padding: 8px 16px;
     border-radius: 4px;
     transition: ease .40s;
     background: #133C55;
     text-decoration: none;
+}
+
+.dashboard-btn {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px;
+    border-radius: 4px;
+    transition: ease .40s;
+    background: #133C55;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
 }
 
 .navbar a:hover {
@@ -85,7 +96,7 @@ header {
         position: absolute;
         top: 70px;
         right: 0;
-        background: #1D84B5;
+        background: #f2f2f2;
         width: 100%;
         text-align: center;
         padding: 10px 0;
@@ -110,174 +121,163 @@ header {
     }
 }
 
-.article-container {
-    margin-top: 120px;
+.flexone {
+    flex: 1;
 }
 
+.article-container {
+    margin-top: 90px; 
+}
 .article-container h1{
     text-align: center;
     font-size:40px;
     color: #133C55;
     letter-spacing: 2px; 
 }
-
-.flexone{
-    flex: 1;
-}
-
-.groups{
+.groups {
     margin: 0 auto;
     width: 1000px;
-    height: auto;
     padding: 10px;
+    height: auto;
 }
 
-.groups li{
+.groups li {
     position: relative;
     list-style: none;
-    background: white;
+    background: #fff;
     border-radius: 15px;
-    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.276);
+    box-shadow: 0 3px 4px 0 #0001;
     overflow: hidden;
     margin-bottom: 30px;
-    border: 2px solid 0 3px 4px 0 rgba(0, 0, 0, 0.276);;
 }
 
-.groups li:hover{
-    box-shadow: 0 3px 14px 0 #0005;
+.groups li:hover {
+    box-shadow: 0 4px 14px 0 #0005;
 }
 
-.groups .card{
+.groups .card {
     overflow: hidden;
     display: block;
 }
 
-.groups .image-session{
+.groups .image-session {
     float: left;
     overflow: hidden;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
-.groups .image-session .image{
+.groups .image-session .image {
     width: 280px;
     height: 220px;
     display: block;
-    background-size: cover !important;
-    background-position: center !important;
-
+    background-size: cover;
+    background-position: center;
 }
 
-.groups .meta-session{
+.groups .meta-session {
     position: relative;
-    padding: 25px;
+    padding: 15px;
     display: block;
     height: 220px;
 }
 
-.meta-session .head{
+.groups .meta-session .head {
     display: flex;
     margin-bottom: 10px;
 }
 
-.meta-session .head .category{
+.groups .meta-session .head .category {
     list-style: none;
     text-decoration: none;
     font-size: 14px;
     font-weight: 600;
-    color: #176087;
+    color: #0075ff;
 }
 
 .meta-session .head .per span,
-.meta-session .head .per input{
+.meta-session .head .per input {
     display: block;
     font-size: 10px;
     text-align: right;
 }
 
-.meta-session .head .per input{
-    appearance: none;
+.meta-session .head .per input {
     -webkit-appearance: none;
+    appearance: none; 
     height: 5px;
     border-radius: 5px;
+    background: #0001;
     margin-bottom: 4px;
     overflow: hidden;
 }
 
-.meta-session .head .per input::-webkit-slider-thumb{
+.meta-session .head .per input::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 0;
-    box-shadow: -100px 0 0 100px #176087;
+    box-shadow: -100px 0 0 100px #0075ff;
 }
-.meta-session .body p {
-    color: rgb(72, 71, 71);
-}
-.meta-session .body .title{
-    min-height: 60px;
+
+.groups .body .title {
+    height: 60px;
     overflow: hidden;
     font-size: 24px;
 }
 
-.meta-session .body .desc{
+.groups .body .desc {
     height: 45px;
     overflow: hidden;
-    font-size: 13px;
     margin-bottom: 10px;
+    font-size: 15px;
+    color: rgb(72, 71, 71);
 }
-.price {
-    font-size: 25px;
-    font-weight: bold;
-    color: #38A3A5;
+
+.groups .footer .button {
     position: absolute;
-    right: 60px;
-    bottom: 80px;
-    text-decoration: bold;
-}
-.meta-session .footer .button{
-    position: absolute;
-    right: 25px;
     bottom: 20px;
-    background: #176087;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    font-size: 18px;
+    right: 25px;
+    background: #133C55;
+    color: #fff;
     line-height: 2.2;
     padding: 0 20px;
-    box-shadow: 0 1px 6px #0004;
-    transition: all 0.3s;
-    align-self: flex-end;
+    border-radius: 4px;
+    text-decoration: none;
+    box-shadow: 0 1px 6px 0 #0004;
 }
 
-.media-session .footer .button:hover{
+.groups .footer .button:hover {
     box-shadow: 0 3px 8px 0 #0005;
-    right: 15px;
-    background: #133C55;
+    background: #1D84B5;
 }
 
-.meta-session .footer .views{
+.groups .footer .price {
     display: block;
-    font-size: 12px;
-    margin-top: 40px;
+    font-size: 18px;
+    margin-top: 20px;
+    color: #176087;
 }
 
-@media screen and (max-width:780px){
-    .groups{width: 96%;}
+@media screen and (max-width: 780px) {
+    .groups {
+        width: 96%;
+    }
 
-    .groups li:hover{
+    .groups li:hover {
         transform: none;
-        box-shadow: 0 3px 14px 0 #0005;
+        box-shadow: none;
     }
 }
 
-@media screen and (max-width:260px) {
-    .groups .image-session{
+@media screen and (max-width: 560px) {
+    .groups .image-session {
         float: none;
         margin-right: 0;
     }
-    .groups .image-session .image{
+
+    .groups .image-session .image {
         width: 100%;
     }
 }
+
 
 .container_footer{
     max-width: 1170px;
@@ -356,12 +356,6 @@ header {
     height: 100%;
     border-radius: 50%;
 }
-
-.footer-col .social-link a:hover{
-    color: #24262b;
-    background: #fff;
-}
-
 @media(max-width:767px){
     .footer-col{
         width: 50%;
