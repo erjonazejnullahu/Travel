@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'Database.php'; // Include the database connection class
+require_once 'Database.php'; 
 
 // Check if the user is logged in and has admin role, otherwise redirect to login
 if (!isset($_SESSION['user_id']) || !isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
@@ -8,7 +8,7 @@ if (!isset($_SESSION['user_id']) || !isset($_SESSION['role']) || $_SESSION['role
     exit;
 }
 
-// Handle form submission
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST['name'];
     $description = $_POST['description'];
@@ -17,12 +17,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $image = $_FILES['image']['name'];
     $popularity = $_POST['popularity'];
 
-    // File upload handling
+   
     $target_dir = "Images/";
     $target_file = $target_dir . basename($_FILES['image']['name']);
     move_uploaded_file($_FILES['image']['tmp_name'], $target_file);
 
-    // Create a new Database instance
     $database = new Database();
     $conn = $database->getConnection();
 
