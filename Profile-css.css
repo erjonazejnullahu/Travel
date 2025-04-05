@@ -54,6 +54,18 @@ main {
     padding: 20px;
 }
 
+#logoutBtn{
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: ease .40s;
+    background: #133C55;
+    text-decoration: none;
+    font-family: 'Poppins';
+}
+
 #profile {
     background-color: white;
     padding: 20px;
@@ -71,23 +83,6 @@ main {
     font-size: 1.2em;
     margin: 5px 0;
 }
-
-#profile button {
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 8px 16px;
-    border-radius: 4px;
-    transition: ease .40s;
-    background: #133C55;
-    text-decoration: none;
-    outline: none; 
-}
-
-#profile button:hover {
-    background-color: #1D84B5;
-}
-
 
 #change-profile-pic {
     background-color: white;
@@ -173,6 +168,40 @@ background-color: #39a1ff;
 #settings button {
     font-family: 'Poppins';
 }
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); 
+    display: flex;
+    justify-content: center;  
+    align-items: center;  
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  .modal-content h2 {
+  margin-bottom: 30px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  
 
 .container_footer{
     max-width: 1170px;
