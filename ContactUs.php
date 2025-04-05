@@ -24,8 +24,8 @@ session_start();
         
         <ul class="navbar">
             <li><a href="Home.php">Home</a></li>
-            <li><a href="AboutUs.html">About Us</a></li>
-            <li><a href="Profile.html">Profile</a></li>
+            <li><a href="AboutUs.php">About Us</a></li>
+            <li><a href="Profile.php">Profile</a></li>
             
         </ul>
     </header>
