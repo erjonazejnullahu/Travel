@@ -38,8 +38,8 @@ if ($result && $result->num_rows > 0) {
     <label for="menu-toggle" class="menu-icon">&#9776;</label>
     <ul class="navbar">
         <li><a href="Home.php">Home</a></li>
-        <li><a href="ContactUs.html">Contact Us</a></li>
-        <li><a href="Profile.html">Profile</a></li>
+        <li><a href="ContactUs.php">Contact Us</a></li>
+        <li><a href="Profile.php">Profile</a></li>
     </ul>
 </header>
 
@@ -57,8 +57,9 @@ if ($result && $result->num_rows > 0) {
         <div class="about-content">
             <h2>Travel</h2>
             <p>Our mission is to make travel planning effortless, enjoyable, and accessible to everyone. 
-               Stay informed with the latest travel insights, trends, and expert tips from our industry professionals.</p>
-            <a href="" class="read-more">Read More</a>
+               Stay informed with the latest travel insights, trends, and expert tips from our industry
+               professionals. Our platform offers a comprehensive guide to destinations worldwide, providing
+               you with valuable insights, trends, and expert tips to make your travel experiences unforgettable.</p>
         </div>
     </section>
 </div>
@@ -114,7 +115,7 @@ if ($result && $result->num_rows > 0) {
             <div class="footer-col">
                 <h4>Company</h4>
                 <ul>
-                    <li><a href="#">About us</a></li>
+                    <li><a href="AboutUs.php">About us</a></li>
                     <li><a href="#">Our services</a></li>
                     <li><a href="#">Privacy Policy</a></li>
                 </ul>
