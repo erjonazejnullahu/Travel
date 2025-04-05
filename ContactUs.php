@@ -1,3 +1,8 @@
+<?php
+
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,9 +23,9 @@
         <label for="menu-toggle" class="menu-icon">&#9776;</label>
         
         <ul class="navbar">
-            <li><a href="Home.html">Home</a></li>
+            <li><a href="Home.php">Home</a></li>
             <li><a href="AboutUs.html">About Us</a></li>
-            <li><a href="#">Profile</a></li>
+            <li><a href="Profile.html">Profile</a></li>
             
         </ul>
     </header>
@@ -30,10 +35,12 @@
             <div class="left"></div>
             <div class="right">
                 <h2>Contact Us</h2>
-                <input type="text" class="field" placeholder="Your name">
-                <input type="email" class="field" placeholder="Your email">
-                <textarea class="field area" placeholder="Message"></textarea>
-                <button class="btn">Send</button>
+                <form method="POST" action="">
+                <input type="text" class="field" name="name" placeholder="Your name">
+                <input type="email" class="field" name="email" placeholder="Your email">
+                <textarea class="field area" name="message" placeholder="Message"></textarea>
+                <button class="btn" name="submit">Send</button>
+                </form>
             </div>  
         </div>
     </div>
@@ -79,6 +86,24 @@
             </div>
         </div>
     </div>
-
 </body>
+<?php
+include_once 'UserRepository.php';
+
+     // Check if form is submitted
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
+    $name = isset($_POST['name']) ? $_POST['name'] : null;
+    $email = isset($_POST['email']) ? $_POST['email'] : null;
+    $message = isset($_POST['message']) ? $_POST['message'] : null;
+
+    if ($name && $email && $message) {
+        $userR = new UserRepository();
+        $userR->messageFromContactUs($name, $email, $message);
+        echo "<script>alert('Your message has been sent successfully!');</script>";
+    } else {
+        echo "<script>alert('Please fill in all fields before submitting.');</script>";
+    }
+}
+?>
 </html>
