@@ -185,22 +185,6 @@ header {
     color: #666;    
 }
 
-.about-content .read-more{
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #176087;
-    color: #fff;
-    font-size: 19px;
-    text-decoration: none;
-    border-radius: 4px;
-    margin-top: 15px;
-    transition: 0.3s ease;
-}
-
-.about-content .read-more:hover{
-    background-color: #1D84B5;
-}
-
 .banner__container {
     display: grid;
     display: flex;
